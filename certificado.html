@@ -1,0 +1,202 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Certificado</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="./assets/stylesheet/style.css" />
+    <link rel="stylesheet" href="login.css">                              <!-- Templatemo style -->
+ 
+    
+    <style>
+        table
+        {
+            width: 70%;
+            font: 20px Calibri;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 20px 30px;
+            text-align: center;
+            margin: 20px 20px;
+        }
+        .botao {
+            background: #73a4dc;
+            border-radius: 5px;
+            padding: 10px 15px;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 15px;
+            margin-left: 5px;
+        }
+        .botao:hover {
+            background: #5988bd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header-->
+        <header class="tm-site-header">
+            <a href="index.html"> <img class="right" src="logo.png"  height="50%"alt="">
+                <h1 class="tm-site-name" style="max-width: 50%"   >Happy Hour</h1><br><br>
+                <p class="tm-site-description" style="max-width: 50%">Sua hora de divertir é agora!</p>
+                </a>
+
+            <nav class="navbar navbar-expand-md tm-main-nav-container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmMainNav" aria-controls="tmMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
+                    <ul class="nav nav-fill tm-main-nav-ul">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="evento.html">Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="atividade.html">Atividades</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="certificado.html">Certificados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                        <li class="nav-item2"></li>
+                        <li class="nav-item3"><a onclick="document.getElementById('id01').style.display='block'"class="nav-link"style="color: black; padding: 9px; margin-top: -5px; margin-bottom: -10px; cursor: pointer;">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="tm-main-content" >  
+        <div id="myTable" class="center">
+            <table> 
+                <tr>
+                    <th>Evento</th>
+                    <th>Atração</th>
+                    <th>Título</th>
+                    <th>Carga Horária</th>
+                </tr>
+                <tr>
+                    <td>Palestra</td>
+                    <td>Coffee break</td>
+                    <td>A origem do café</td>
+                    <td>2h</td>
+                </tr>
+                <tr>
+                    <td>Amostra de artes</td>
+                    <td>Frida</td>
+                    <td>Quadros de Frida</td>
+                    <td>3h</td>
+                </tr>
+                <tr>
+                    <td>Show Musical</td>
+                    <td>Show do Jão</td>
+                    <td>Iflooza</td>
+                    <td>4h</td>
+                </tr>
+            </table>
+            <p id="b">
+            <input class="botao" type="button" value="Criar PDF" id="btnImprimir" onclick="CriaPDF()" />
+            </p>
+        </div> 
+        </div>
+        <section class="media tm-highlight tm-highlight-w-icon">
+
+            <div class="tm-highlight-icon">
+                <i class="fa tm-fa-6x fa-meetup"></i>    
+            </div>                    
+
+            <div class="media-body">
+                <header>
+                    <h2>Precisa de Ajuda?</h2>
+                </header>
+                <p class="tm-margin-b">Caso precise ou queira falar conosco, escolha uma das opções de contato e lhe responderemos o mais rápido possível!</p>
+                <a href="contact.html" class="tm-white-bordered-btn">Falar Conosco</a>
+            </div>                    
+        </section>
+        
+        
+        <div id="id01" class="modal">
+        
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img_avatar.png" alt="Avatar" class="avatar">
+                </div>
+            
+                <div class="container1">
+                <label for="uname"><b>Nome</b></label>
+                <input type="text" placeholder="Digite seu nome" name="uname" required>
+            
+                <label for="psw"><b>Senha</b></label>
+                <input type="password" placeholder="Digite sua senha" name="psw" required>
+                    
+                <button type="submit"><a href="index.html" style="color: #f1f1f1;">Login</a></button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Lembrar Senha
+                </label>
+                </div>
+            
+                <div class="container1" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="color: white;">Cancelar</button>
+                <span class="psw"><a href="cadastro.html" class="nav-link" st>Cadastre-se</a></span>
+                </div>
+            </form>
+            </div>
+        
+        <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+
+            <footer>
+                Copyright &copy; <span class="tm-current-year">2018</span> Happy Hour Eventos
+            </footer>    
+       
+        </div>
+    </div>
+
+</body>
+<script>
+    function CriaPDF() {
+        var minhaTabela = document.getElementById('myTable').innerHTML;
+
+        var style = "<style>";
+        style = style + "table {width: 100%;font: 20px Calibri;}";
+        style = style + "p {font: 50px Calibri; padding: 2px 3px; }";
+        style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "padding: 2px 3px;text-align: center;}";
+        style = style + "img {width: 50%;}";
+        style = style + ".botao {background-color: white; color: white; border-color: white; whidth: 1px; opacity: 0.0;}";
+        style = style + "</style>";
+
+        // CRIA UM OBJETO WINDOW
+        var win = window.open('', '', 'height=700,width=700');
+
+        win.document.write('<html><head>');
+        win.document.write('<title>Certificado</title>');// <title> CABEÇALHO DO PDF.
+        win.document.write(style);                       // INCLUI UM ESTILO NA TAB HEAD
+        win.document.write('</head>');
+        win.document.write('<body>');
+        win.document.write('<center><p>CERTIFICADO</p></center>');  
+        win.document.write(minhaTabela);                   // O CONTEUDO DA TABELA DENTRO DA TAG BODY
+        win.document.write('<center><img src="img/rubrica.png" alt="Image" ></center>');
+        win.document.write('</body></html>');
+        win.document.close(); 	                            // FECHA A JANELA
+
+        win.print();                                        // IMPRIME O CONTEUDO
+    }
+</script>
+</html>
